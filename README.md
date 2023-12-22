@@ -6,5 +6,11 @@
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
-  <body>Hello,World</body>
+  <body>
+    <py-script>
+      from datetime import datetime
+      now = datetime.now()
+      print(f"今は{now:%Y年%m月%d日 %H:%M:%S}です。")
+    </py-script>
+  </body>
 </html>
