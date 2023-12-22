@@ -8,9 +8,6 @@
   </head>
   <body>
     <py-script>
-      from datetime import datetime
-      now = datetime.now()
-      print(f"今は{now:%Y年%m月%d日 %H:%M:%S}です。")
       price=input("リース債務残高")
       rate=input("割引率")
       period=input("リース期間")
