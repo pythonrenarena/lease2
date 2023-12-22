@@ -17,63 +17,63 @@
       fee=input("年間リース料")
       print("リース債務残高:"+price+"円、割引率:"+rate+"%、年数:"+period+"年、年間リース料:"+fee+"円")
 
-year=1
+      year=1
       
-balance=price
-deptotal=0
+      balance=price
+      deptotal=0
 
-print(str(year)+"年目期首")
-print("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　")
-print("リース資産"+str(price)+"/リース債務"+str(balance))
-print("（BS　リース債務合計額:"+str(balance)+"）")
-while int(year)<int(period):
+      print(str(year)+"年目期首")
+      print("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　")
+      print("リース資産"+str(price)+"/リース債務"+str(balance))
+      print("（BS　リース債務合計額:"+str(balance)+"）")
+      while int(year)<int(period):
 
- print("---------------------------------------")
-
-
- interest=round(int(balance)*int(rate)/100)
- repayment=int(fee)-int(interest)
- balance=int(balance)-int(repayment)
- dep=round(int(price)/int(period))
- deptotal=dep+deptotal
-
- print(str(year)+"年目期末")
- print("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　")
- print("支払利息"+str(interest)+"/現金預金"+str(fee))
- print("リース債務"+str(repayment))
-
- print("（BS　リース債務合計額:"+str(balance)+"）")
- print("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　")
- print("減価償却費"+str(dep)+"/減価償却累計額"+str(dep))
-
- print("（BS　減価償却累計額:"+str(deptotal)+"）")
-
- year=year+1
+       print("---------------------------------------")
 
 
-print("---------------------------------------")
+       interest=round(int(balance)*int(rate)/100)
+       repayment=int(fee)-int(interest)
+       balance=int(balance)-int(repayment)
+       dep=round(int(price)/int(period))
+       deptotal=dep+deptotal
 
-repayment=int(balance)
-interest=int(fee)-int(repayment)
-balance=0
-dep=round(int(price)/int(period))
-deptotal=dep+deptotal
+       print(str(year)+"年目期末")
+       print("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　")
+       print("支払利息"+str(interest)+"/現金預金"+str(fee))
+       print("リース債務"+str(repayment))
 
-print(str(year)+"年目期末")
-print("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　")
-print("支払利息"+str(interest)+"/現金預金"+str(fee))
-print("リース債務"+str(repayment))
+       print("（BS　リース債務合計額:"+str(balance)+"）")
+       print("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　")
+       print("減価償却費"+str(dep)+"/減価償却累計額"+str(dep))
 
-print("（BS　リース債務合計額:"+str(balance)+"）")
+       print("（BS　減価償却累計額:"+str(deptotal)+"）")
 
-print("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　")
-
-print("減価償却費"+str(dep)+"/減価償却累計額"+str(dep))
-
-print("（BS　減価償却累計額:"+str(deptotal)+"）")
+       year=year+1
 
 
-print("---------------------------------------")
+      print("---------------------------------------")
+
+      repayment=int(balance)
+      interest=int(fee)-int(repayment)
+      balance=0
+      dep=round(int(price)/int(period))
+      deptotal=dep+deptotal
+
+      print(str(year)+"年目期末")
+      print("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　")
+      print("支払利息"+str(interest)+"/現金預金"+str(fee))
+      print("リース債務"+str(repayment))
+
+      print("（BS　リース債務合計額:"+str(balance)+"）")
+
+      print("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　")
+
+      print("減価償却費"+str(dep)+"/減価償却累計額"+str(dep))
+
+      print("（BS　減価償却累計額:"+str(deptotal)+"）")
+
+
+      print("---------------------------------------")
     </py-script>
   </body>
 </html>
